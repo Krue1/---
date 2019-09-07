@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的第一个html文件</title>
+    <style type="text/css">
+        #header {
+            background-color: black;
+            color:white;
+            text-align: center;
+            padding:5px;
+            width: 600px;
+        }
+        #nav {
+            background-color: #eeeeee;
+            line-height: 80px;
+            height: 310px;
+            width: 100px;
+            float:left;
+            padding:5px;
+        }
+        #section {
+            background-color:white;
+            width:480px;
+            height:300px;
+            float:left;
+            padding:10px;
+        }
+        #footer {
+            clear:both;
+            background-color: black;
+            color:white;
+            text-align: center;
+            padding:5px;
+            width:600px;
+        }
+    </style>
+</head>
+<body style="background-color:#e4f2f0">
+    <h1 style="text-align: center">This is heading 1</h1>
+    <h1>我的第一个html标题h1</h1>
+    <h2>我的第一个html标题h2</h2>
+    <h3>我的第一个html标题h3</h3>
+    <p>这是我的第一个段落</p>
+    <p>this is another paragraph</p>
+    <hr />
+
+    <h1 style="text-align: center">链接</h1>
+    <p><a href="https://www.baidu.com">this is a link</a></p>
+    <br />
+    <p id="anchor1"><a href="https://www.baidu.com">
+        <img src="http://imgup04.iefans.net/iefans/2019-02/11/11/15498570716693_1.jpg" width="220px" height="80px" />
+    </a></p>
+    <!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> -->
+    <p><a href="https://www.baidu.com" target="_blank">This link will be opened in a new page</a></p>
+    <p><a href="#anchor1">跳转到百度LOGO</a></p>
+    <p>下面将用分割线分开不同小节</p>
+    <hr />
+
+    <!-- this is a comment -->
+    <h1 style="text-align: center">style设置字体测试</h1>
+    <p style="font-family: times;color:darkgoldenrod">look! fontFamily and color</p>
+    <p style="font-size: 30px">this text is 30 pixels high</p>
+    <p style="color: darkseagreen">I'm darkSeagreen</p>
+    <hr />
+
+    <h1 style="text-align: center">表格</h1>
+    <table border="1" cellpadding="10">
+        <tr><th colspan="2">this is a heading</th></tr>
+        <tr>
+            <td>row 1,column 1</td>
+            <td>row 1,column 2</td>
+        </tr>
+        <tr>
+            <td>row 2,column 1</td>
+            <td>row 2,column 2</td>
+        </tr>
+    </table>
+    <br />
+    <table border="1" cellpadding="10">
+        <tr>
+            <th rowspan="2">这是一个跨行表格</th>
+            <td>row1, column2</td>
+        </tr>
+        <tr>
+            <td>row2, column2</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h1 style="text-align: center">列表</h1>
+    <p>
+        无序列表
+        <ul>
+            <li>苹果</li>
+            <li>香蕉</li>
+            <li>雪梨</li>
+        </ul>
+    </p>
+    <p>
+        有序列表
+        <ol>
+            <li>打开冰箱门</li>
+            <li>取出大象</li>
+            <li>关上冰箱门</li>
+        </ol>
+    </p>
+    <p>
+        定义列表
+        <dl>
+            <dt>title 1</dt>
+            <dd>content 1</dd>
+            <dt>title 2</dt>
+            <dd>content 2</dd>
+        </dl>
+    </p>
+    <hr />
+
+    <h1 style="text-align: center">HTML布局</h1>
+    <div id="header">
+        <h1>City Gallery</h1>
+    </div>
+    <div id="nav">
+        London<br />
+        Paris<br />
+        Tokyo<br />
+    </div>
+    <div id="section">
+        <h2>London</h2>
+        <p>London is the capital city of England. It is the most populous city in the United Kingdom,
+            with a metropolitan area of over 13 million inhabitants.</p>
+        <p>Standing on the River Thames, London has been a major settlement for two millennia,
+            its history going back to its founding by the Romans, who named it Londinium.</p>
+    </div>
+    <div id="footer">
+        Copyright @ W3Schools.com
+    </div>
+    <hr />
+
+    <h1 style="text-align: center">表单</h1>
+    <!-- <form action="http://www.example.com/test.asp" method="post/get"> -->
+    <form action="https://www.w3school.com.cn/demo/demo_form.asp" method="post/get">
+        <fieldset style="width: 576px">
+            <legend>Personal information</legend>
+            First name:<br />
+            <input type="text" name="firstName">
+            <br />
+            Last name:<br />
+            <input type="text" name="lastName">
+            <br />
+            Sex:<br />
+            <input type="radio" name="sex" value="male" checked="checked">Male
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="sex" value="female">Female
+            <br />
+            Nation:
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <select name="nation">
+                <option value="America">America</option>
+                <option value="Canada">Canada</option>
+                <option value="China" selected="selected">China</option>
+                <option value="England">England</option>
+            </select>
+            <br />
+            <textarea name="message" rows="5" cols="30">write something down here.</textarea>
+            <br />
+            Select your favorite color: <input type="color" name="favColor">
+            <button type="button" onclick="alert('Hello World!!!')">Button test</button>
+            <input type="submit" value="Submit">
+            <br />
+        </fieldset>
+    </form>
+</body>
+
+</html>
