@@ -1,0 +1,80 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    border: 1px solid #e6e6e6;
+}
+
+.boldit {
+    font-weight: 700;
+    margin-right: 0.5%;
+}
+
+.little-span {
+    margin-right: 3%;
+}
+
+.little-div {
+    margin-bottom: 1%;
+}
+
+#left-part {
+    display: flex;
+    align-items:center;
+    height: 100px;
+    background-color: #858585;
+}
+
+#left-part h1 {
+    margin-left: 20px;
+    color: #fff;
+}
+
+.box h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #d6d6d6;
+    height: 100px;
+    width: 150px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.big-div {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 2%;
+}
+
+.big-div br {
+    display: none;
+}
+
+.little-div {
+    width: 100%;
+}
+
+.little-span {
+    margin-top: 1%;
+    width: 14%;
+}
+
+.little-span:first-of-type {
+    margin-left: 2%;
+}
+
+.little-div:first-of-type {
+    margin-top: 1%;
+}
