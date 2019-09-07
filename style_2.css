@@ -1,0 +1,40 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    height: 930px;
+}
+
+.boldit {
+    font-weight: 700;
+    margin-right: 0.5%;
+}
+
+.little-span {
+    margin-right: 3%;
+}
+
+.little-div {
+    margin-bottom: 1%;
+}
+
+#left-part {
+    float: left;
+    width: 15%;
+    height: 100%;
+    text-align: center;
+    background-color: #65a5fa;
+}
+
+#left-part h1{
+    color: #fff;
+}
+
+#right-part {
+    float: right;
+    width: 82%;
+    height: 100%;
+}
