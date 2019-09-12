@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" charset="UTF-8">
+    <title>双飞翼布局</title>
+    <style>
+        .main {
+            float: left;
+            height: 200px;
+            width: 100%;
+            background-color: aqua;
+        }
+
+        .sub {
+            float: left;
+            height: 200px;
+            width: 190px;
+            margin-left: -100%;
+            background-color: blueviolet;
+            position: relative;
+            left: -190px;
+        }
+
+        .extra {
+            float: left;
+            height: 200px;
+            width: 190px;
+            margin-left: -190px;
+            background-color: coral;
+            position: relative;
+            left: 190px;
+        }
+
+        #bd {
+            padding: 0 230px 0 190px;
+        }
+
+        #main-content {
+            margin: 0 230px 0 190px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <div id="hd"></div>
+        <div id="bd">
+            <div class="main">
+                <div id="main-content">#main</div>
+            </div>
+            <div class="sub"></div>
+            <div class="extra"></div>
+        </div>
+        <div id="ft"></div>
+    </div>
+</body>
+
+</html>

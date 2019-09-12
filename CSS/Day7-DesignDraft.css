@@ -1,0 +1,161 @@
+html, body {
+    font-size: 14px;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+#header {
+    height: 100px;
+    background-color: #333;
+    color: #eee;
+}
+
+#header ul {
+    float: right;
+    margin-top: 10px;
+}
+
+#header li {
+    display: inline;
+    margin-right: 5px;
+}
+
+#header li a{
+    color: #eee;
+}
+
+#header li a:hover{
+    text-decoration: none;
+    color: #ddd;
+}
+
+#logo {
+    float: left;
+    line-height: 80px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+#banner {
+    height: 260px;
+    background-color: #6b3;
+}
+
+#banner ul {
+    margin: 0;
+}
+
+#banner li {
+    display: inline-block;
+    width: 24px;
+    height: 30px;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: #89b470;
+    background-color: #b2dd99;
+    border: 1px solid #528f2d;
+}
+
+#banner li:nth-of-type(2) {
+    padding-top: 15px;
+    border: 1px solid #333;
+    background-color: #d5ecc8;
+}
+
+#banner #number {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+#nav {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#nav ul {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    padding-left: 0;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+#nav li {
+    display: inline-block;
+    margin-right: -4.5px;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    border-top-left-radius: 20px 20px;
+    border-top-right-radius: 20px 20px;
+}
+
+#nav li:first-child {
+    height: 40px;
+    background-color: white;
+    border-bottom: 1px solid white;
+}
+
+#main-content {
+    width: 100%;
+    height: 480px;
+}
+
+#main-content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#main-content .content {
+    box-sizing: border-box;
+    width: 1;
+    height: 100%;
+    margin-right: 10px;
+    text-align: center;
+    padding: 60px;
+    flex-grow: 1;
+    color: #333;
+    border: 1px solid #e0e0e0;
+}
+
+#main-content #row1, #main-content #row2, #main-content #row3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-content #row1 .content:nth-of-type(3) {
+    flex-grow: 0.5;
+}
+
+#footer {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: #666;
+}
+
+#footer .container {
+    text-align: center;
+    padding-top: 20px;
+    height: 80px;
+    color: #eee;
+}

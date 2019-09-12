@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化
+    </title>
+    <style>
+        html,
+        body {
+            margin:0;
+            height: 100%;
+        }
+
+        #main {
+            float: left;
+            width: 100%;
+            height: 100%;
+        }
+
+        #main-content {
+            margin: 0 250px;
+            height: 100%;
+            background-color: darkseagreen;
+            text-align: center;
+            color:deeppink;
+        }
+
+        #left, #right {
+            float: left;
+            width: 240px;
+            height: 100%;
+        }
+        #left {
+            margin-left: -100%;
+            background-color: chocolate;
+        }
+
+        #right {
+            margin-left: -240px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="main-content">
+            这里有字
+        </div>
+    </div>
+    <div id="left"></div>
+    <div id="right"></div>
+</body>
+
+</html>
