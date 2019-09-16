@@ -1,0 +1,636 @@
+html, body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Montserrat ExtraLight", Arial, Helvetica, sans-serif;
+    zoom: 0.8887;
+}
+
+input, button, textarea {
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Montserrat Light", Arial, Helvetica, sans-serif;
+    border: 1px solid rgba(170,170,170,0.5);
+    border-radius: 3px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#header, #footer {
+    position: relative;
+}
+
+#header {
+    width: 1600px;
+    height: 990px;
+    text-align: center;
+    color: #fff;
+    background-image: url(../Sundries/Day9-11/前端学院设计图-assets/Background.jpg);
+}
+
+#header .text {
+    position: relative;
+    height: 220px;
+    width: 767px;
+    margin: 0 auto;
+    padding-top: 209px;
+}
+
+#header p {
+    color: #aaa;
+}
+
+#header .text h1{
+    font-size: 3.875rem;
+    font-weight: 400;
+}
+
+#header .text p {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    font-weight: 100;
+}
+
+#header #signUp-form {
+    width: 970px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 103px;
+    border: 1px solid rgba(170,170,170,0.3);
+    border-radius: 3px;
+}
+
+#header #signUp-form p {
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+
+#header #signUp-form h6 {
+    font-size: 1rem;
+    margin: 16px auto;
+    margin-top: 60px;
+    letter-spacing: 2px;
+}
+
+#header #signUp-form form {
+    margin: 0 auto;
+    margin-top: 46px;
+    display: flex;
+    width: 769px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #signUp-form input,
+#header #signUp-form button {
+    height: 50px;
+}
+
+#header #signUp-form input {
+    width: 292px;
+    padding: 18px;
+    background: transparent;
+    font-size: 0.875rem;
+    color: #fff;
+}
+
+#header #signUp-form input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 3px #aaa;
+}
+
+#header #signUp-form input:focus::placeholder {
+    color: #ccc;
+}
+
+#header #signUp-form button {
+    background-color: #fff;
+    font-size: 0.75rem;
+    width: 125px;
+    font-weight: 700;
+}
+
+#feature1 {
+    width: 100%;
+    height: 710px;
+}
+
+#feature1 .title {
+    width: 663px;
+    height: 148px;
+    margin: 0 auto;
+    margin-top: 89px;
+    text-align: center;
+}
+
+#feature1 .title h6 {
+    font-size: 0.875rem;
+    font-family: "Montserrat Light", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+#feature1 .title h1 {
+    font-size: 2.625rem;
+    font-weight: 550;
+    word-wrap: break-word;
+}
+
+#feature1 .container {
+    width: 1047px;
+    height: 285px;
+    margin: 0 auto;
+    margin-top: 82px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature1 .container .column{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+#feature1 .features {
+    width: 426px;
+    height: 120px;
+}
+
+#feature1 .features .pics {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 30px;
+    padding-top: 3px;
+}
+
+#feature1 .features .pics img{
+    float: right;
+}
+
+#feature1 .features .text {
+    overflow: hidden;
+    color: #141414;
+}
+
+#feature1 .features .text p {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 352px;
+    height: 77px;
+}
+
+#feature1 .features .text h4 {
+    font-family: "Montserrat Light", Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+#call-to-action {
+    width: 100%;
+    height: 800px;
+    background-image: url(../Sundries/Day9-11/前端学院设计图-assets/background2.jpg);
+    position: relative;
+}
+
+#call-to-action .text {
+    padding-top: 184px;
+    padding-left: 316px;
+    width: 370px;
+    height: 322px;
+    color: #fff;
+    letter-spacing: -0.8px;
+}
+
+#call-to-action .text h2 {
+    font-size: 2.625rem;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+#call-to-action .text p {
+    font-size: 1.125rem;
+}
+
+#call-to-action #call-to-action-form {
+    margin-top: 50px;
+    margin-left: 316px;
+    width: 505px;
+    height: 60px;
+}
+
+#call-to-action #call-to-action-form form{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#call-to-action #call-to-action-form button {
+    width: 240px;
+    height: 60px;
+    font-size: 0.75rem;
+}
+
+#call-to-action #call-to-action-form button:first-of-type {
+    background-color: #fff;
+    color: #141414;
+}
+
+#call-to-action #call-to-action-form button:nth-of-type(2) {
+    background-color: transparent;
+    color: #fff;
+}
+
+#call-to-action #screen {
+    width: 645px;
+    height: 600px;
+    position: absolute;
+    top: 104px;
+    left: 955px;
+    overflow: hidden;
+}
+
+#call-to-action #screen img:first-of-type{
+    width: 843.9px;
+    height: 600px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+#call-to-action #screen img:nth-of-type(2){
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    z-index: 1;
+}
+
+#feature2 {
+    width: 100%;
+    height: 579px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#feature2 .title {
+    width: 1600px;
+    height: 125px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#feature2 .title h2 {
+    width: 536px;
+    height: 41px;
+    margin: 0 auto;
+}
+
+#feature2 #logo {
+    width: 963px;
+    height: 354px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#feature2 #logo .logos {
+    width: 270px;
+    height: 354px;
+    text-align: center;
+}
+
+#feature2 #logo .logos p {
+    margin-top: 32px;
+    color: #141414;
+    font-size: 1rem;
+}
+
+#feature3 {
+    width: 100%;
+    height: 1000px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#feature3 .features {
+    width: 975px;
+    height: 350px;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#feature3 .features:first-of-type {
+    margin-top: 114px;
+}
+
+#feature3 .features img {
+    width: 570px;
+    height: 350px;
+}
+
+#feature3 .features .text {
+    height: 350px;
+    padding-top: 78px;
+}
+
+#feature3 .features:first-of-type .text {
+    width: 305px;
+}
+
+#feature3 .features:nth-of-type(2) .text {
+    width: 320px;
+}
+
+#feature3 .features .text h4 {
+    margin-bottom: 35px;
+    font-size: 1.25rem;
+    font-family: "Montserrat Light", Arial, Helvetica, sans-serif;
+}
+
+#team {
+    width: 100%;
+    height: 1084px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#team .title {
+    width: 698px;
+    height: 107px;
+    margin: 0 auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#team .title h2 {
+    font-size: 2.625rem;
+    margin-top: 0;
+    margin-bottom: 37px;
+}
+
+#team .title p {
+    font-size: 1.125rem;
+}
+
+#team .container {
+    width: 970px;
+    height: 710px;
+    margin: 0 auto;
+    margin-top: 68px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+#team .container .column {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+}
+
+#team .container .teams,
+#team .container .teams img,
+#team .container .teams .mask {
+    width: 470px;
+    height: 340px;
+}
+
+#team .container .teams {
+    position: relative;
+}
+
+.mask {
+    width: 470px;
+    height: 340px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(102,102,102,0.7);
+    opacity: 0;
+}
+
+.mask .text {
+    width: 186px;
+    height: 46px;
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat Light", Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    margin-top: 110px;
+    margin-bottom: 55px;
+}
+
+.mask .text h4 {
+    font-size: 1.25rem;
+    margin: 0 auto;
+}
+
+.mask .text h6 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 22px;
+    margin-bottom: 0;
+}
+
+.mask .logos {
+    width: 213px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#team .container .teams .mask .logos img {
+    width: 51px;
+    height: 54px;
+}
+
+#team .container .column .teams:hover {
+    cursor: url("../Sundries/Day9-11/前端学院设计图-assets/Hand Icon.png"), auto;
+}
+
+#team .container .column .teams:hover .mask {
+    opacity: 1;
+}
+
+#contact {
+    width: 100%;
+    height: 700px;
+    border-bottom: 1px solid #e7e7e7;
+    font-family: "Montserrat Light", Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+#contact #contact-form {
+    width: 470px;
+    height: 560px;
+    border: 1px solid rgba(170,170,170,0.3);
+    border-radius: 3px;
+    position: absolute;
+    left: 315px;
+    top: 70px;
+    text-align: center;
+}
+
+#contact #contact-form h4 {
+    font-size: 1rem;
+    margin-bottom: 45px;
+    margin-top: 50px;
+}
+
+#contact #contact-form input {
+    width: 370px;
+    height: 50px;
+    padding: 20px;
+    font-size: 0.875rem;
+    color: #141414;
+    margin-bottom: 30px;
+}
+
+#contact #contact-form textarea {
+    width: 370px;
+    height: 144px;
+    padding: 20px;
+    margin: 0 auto;
+    font-size: 0.875rem;
+    color: #141414;
+    margin-bottom: 30px;
+    resize: none;
+}
+
+#contact #contact-form button {
+    width: 370px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 0.875rem;
+    background-color: #141414;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#contact .title {
+    width: 357px;
+    height: 134px;
+    position: absolute;
+    top: 159px;
+    right: 332px;
+}
+
+#contact .title h2 {
+    width: 174px;
+    height: 30px;
+    margin: 0;
+    font-size: 2.625rem;
+    margin-bottom: 40px;
+    font-family: "Montserrat ExtraLight", Arial, Helvetica, sans-serif;
+}
+
+#contact .container {
+    width: 262px;
+    height: 150px;
+    position: absolute;
+    top: 362px;
+    right: 427px;
+}
+
+#contact .container .contacts {
+    width: 262px;
+    height: 30px;
+    margin-bottom: 35px;
+}
+
+#contact .container .contacts .pics {
+    width: 28px;
+    height: 26px;
+    float: left;
+    margin-right: 18px;
+    padding-top: 3px;
+}
+
+#contact .container .contacts .pics img{
+    float: right;
+}
+
+#contact .container .contacts h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#feature1 .container .contacts .text {
+    overflow: hidden;
+    color: #141414;
+}
+
+#footer {
+    width: 100%;
+    height: 410px;
+    background-color: #141414;
+    color: #fff;
+    position: relative;
+}
+
+#footer #menu {
+    width: 683px;
+    height: 200px;
+    margin-left: 215px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer #menu .menus {
+    width: 150px;
+    height: 200px;
+    margin-top: 88px;
+}
+
+#footer #menu .menus h5 {
+    font-family: "Montserrat Light", Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    margin-top: 0;
+    margin-bottom: 38px;
+}
+
+#footer #menu .menus p {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #a7a7a7;
+}
+
+#footer .text {
+    width: 260px;
+    height: 85px;
+    position: absolute;
+    top: 88px;
+    right: 227px;
+}
+
+#footer .text h5 {
+    font-family: "Montserrat Light", Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#footer .text p {
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+#footer #social {
+    width: 222px;
+    height: 18px;
+    position: absolute;
+    top: 213px;
+    right: 264px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.5;
+}
