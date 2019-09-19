@@ -1,0 +1,382 @@
+html, body {
+    font-size: 16px;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    min-height: 850px;
+    /* height: 1020px; */
+}
+
+body {
+    display: flex;
+}
+
+p {
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.875rem;
+}
+
+h6 {
+    font-size: 0.75rem;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+input ,button {
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #e5e8ee;
+    border-radius: 3px;
+    color: #9fa9ba;
+}
+
+#primary {
+    width: 100px;
+    min-width: 100px;
+    height: 100%;
+    background-color: #1d2531;
+    position: relative;
+    z-index: 1;
+}
+
+#primary #items {
+    width: 60px;
+    height: 303px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 18px;
+    top: 20px;
+}
+
+#primary .container {
+    width: 48px;
+    height: 16px;
+    position: absolute;
+    left: 24px;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#secondary {
+    width: 250px;
+    height: 100%;
+    background-color: #222c3c;
+    color: #b7c0cd;
+    position: relative;
+}
+
+#secondary #part1, #secondary #part2, #secondary #part3 {
+    border-bottom: 1px solid #2a3547;
+    padding: 30px;
+    position: relative;
+}
+
+#secondary .text {
+    float: left;
+}
+
+#secondary img[src="../Sundries/Day12-15/12_15-assets/Settings.png"] {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#secondary #part1 {
+    width: 191px;
+    height: 198px;
+}
+
+#secondary #part1 .text {
+    width: 140px;
+    height: 200px;
+}
+
+#secondary h6 {
+    color: #5b6779;
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+
+#secondary .text h5 {
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+
+#secondary #part1 img[src="../Sundries/Day12-15/12_15-assets/Notification1.png"] {
+    position: absolute;
+    top: 102px;
+    right: 30px;
+}
+
+#secondary #part2 {
+    width: 191px;
+    height: 160px;
+}
+
+#secondary #part2 .icons {
+    width: 19px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    float: left;
+    margin-right: 12px;
+}
+
+#secondary #part2 h5 {
+    margin-bottom: 23px;
+}
+
+#secondary #part3 {
+    width: 191px;
+    height: 196px;
+}
+
+#secondary #part3 img[src="../Sundries/Day12-15/12_15-assets/Active Highlight.png"]{
+    position: absolute;
+    top: 66px;
+    left: -10px;
+}
+
+#secondary #part3 img[src="../Sundries/Day12-15/12_15-assets/Notification2.png"]{
+    position: absolute;
+    top: 62px;
+    right: 30px;
+}
+
+#secondary #part3 img[src="../Sundries/Day12-15/12_15-assets/Alert Icon.png"]{
+    position: absolute;
+    top: 144px;
+    right: 30px;
+}
+
+#secondary #server-capacity {
+    widows: 191px;
+    height: 32px;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+
+#secondary #server-capacity .text {
+    width: 191px;
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#secondary #server-capacity .text h5 {
+    margin-bottom: 14px;
+}
+
+#right-part {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#top-bar {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid #e6e9ec;
+}
+
+#top-bar h2 {
+    font-size: 1.5rem;
+    line-height: 80px;
+    margin: 0;
+    margin-left: 32px;
+    color: #354052;
+}
+
+#top-bar #profile {
+    width: 151px;
+    height: 50px;
+    position: absolute;
+    top: 14px;
+    right: 82px;
+}
+
+#top-bar #profile img {
+    float: left;
+}
+
+#top-bar #profile .text {
+    float: right;
+}
+
+#top-bar #profile .text h4 {
+    margin: 10px 0;
+    color: #2399f1;
+}
+
+#top-bar #profile .text h5 {
+    margin: 0;
+    color: #b5b5b5;
+}
+
+#top-bar img[src="../Sundries/Day12-15/12_15-assets/dropdown.png"] {
+    position: absolute;
+    right: 31px;
+    top: 35px;
+}
+
+#bottom-part {
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+#tertiary {
+    width: 401px;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+#tertiary #search {
+    width: 340px;
+    height: 36px;
+    padding: 16px 30px;
+    position: relative;
+    border: 1px solid #e6e9ec;
+    top: -1px;
+}
+
+#tertiary #search input {
+    width: 340px;
+    height: 36px;
+    padding: 14px;
+}
+
+#tertiary #search img {
+    position: absolute;
+    top: 25px;
+    right: 45px;
+}
+
+#tertiary #chat {
+    position: relative;
+    top: -2px;
+    width: 400px;
+    height: calc(100% - 70px);
+    border: 1px solid #e6e9ec;
+    overflow: hidden;
+}
+
+#tertiary #chat .chats {
+    width: 400px;
+    height: 130px;
+    border-bottom: 1px solid #e6e9ec;
+    position: relative;
+}
+
+img[src="../Sundries/Day12-15/12_15-assets/Colour highlight.png"] {
+    float: left;
+    position: relative;
+    left: -1px;
+}
+
+img[src="../Sundries/Day12-15/12_15-assets/Notification3.png"] {
+    position: absolute;
+    top: 76px;
+    right: 20px;
+}
+
+#tertiary #chat .chats .avatar {
+    width: 285px;
+    height: 46px;
+    padding: 16px 30px;
+}
+
+#tertiary #chat .chats .avatar > img:first-of-type {
+    float: left;
+    margin-right: 20px;
+}
+
+#tertiary #chat .chats .avatar .container {
+    float: left;
+    width: 130px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#tertiary #chat .chats .avatar .container h4 {
+    margin-bottom: 10px;
+}
+
+#tertiary #chat .chats .avatar .container h5 {
+    color: #b5b5b5;
+}
+
+#tertiary #chat .chats:first-of-type .avatar .container h4 {
+    color: #2399f1;
+}
+
+#tertiary #chat .chats > h5 {
+    position: absolute;
+    top: 25px;
+    right: 22px;
+    color: #7f8fa4;
+}
+
+#tertiary #chat .chats .text {
+    width: 90%;
+    height: 30px;
+    margin-left: 30px;
+}
+
+#tertiary #chat .chats:first-of-type .text {
+    width: 310px;
+}
+
+#tertiary #chat .chats .text p {
+    font-size: 0.875rem;
+    color: #585d68;
+}
+
+#quaternary {
+    width: calc(100% - 402px);
+    height: 100%;
+    float: left;
+}
+
+#quaternary #profile-bar {
+    width: 100%;
+    height: 36px;
+    padding: 16px 30px;
+    position: relative;
+    border: 1px solid #e6e9ec;
+    top: -1px;
+}
+
+#quaternary #profile-bar h1 {
+    line-height: 36px;
+    text-align: center;
+}
+
+#quaternary #line1 {
+    margin: 200px 20px;
+    /* padding: 0 10px 0; */
+    text-align: center;
+    line-height: 1px;
+    border-left: 160px solid #7f8fa4;
+    border-right: 160px solid #7f8fa4;
+}
