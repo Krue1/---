@@ -380,8 +380,14 @@ img[src="../Sundries/Day12-15/12_15-assets/Notification3.png"] {
 
 #quaternary #line1 {
     margin: 200px 20px;
+    margin-bottom: 50px;
     text-align: center;
     line-height: 1px;
     border-left: 160px solid #7f8fa4;
     border-right: 160px solid #7f8fa4;
+}
+
+#quaternary > h1 {
+    line-height: 100px;
+    text-align: center;
 }
