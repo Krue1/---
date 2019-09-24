@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3的小游戏</title>
+</head>
+
+<body>
+
+    <script>
+        function in3(num) {
+            while (num) {
+                if (num % 10 === 3) {
+                    return true;
+                }
+                num = Math.floor(num / 10);
+            }
+            return false;
+        }
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 === 0 || in3(i)) {
+                console.log("PA, ");
+            } else {
+                console.log(i+", ");
+            }
+        }
+    </script>
+</body>
+
+</html>

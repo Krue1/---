@@ -15,30 +15,52 @@
     <button id="divide-btn">除</button>
     <p id="result">运算结果</p>
     <script>
+        function isNumber(obj) {
+            return typeof obj === Number && obj !== NaN;
+        }
+
         var z;
         document.getElementById("add-btn").onclick = function () {
             var x = Number(document.getElementById("first-number").value);
             var y = Number(document.getElementById("second-number").value);
+            if (!isNumber(x) || !isNumber(y)) {
+                console.log("输入非数字");
+            }
             z = x + y;
             document.getElementById("result").innerHTML = z;
         }
         document.getElementById("minus-btn").onclick = function () {
             var x = Number(document.getElementById("first-number").value);
             var y = Number(document.getElementById("second-number").value);
+            if (!isNumber(x) || !isNumber(y)) {
+                console.log("输入非数字");
+            }
             z = x - y;
             document.getElementById("result").innerHTML = z;
         }
         document.getElementById("times-btn").onclick = function () {
             var x = Number(document.getElementById("first-number").value);
             var y = Number(document.getElementById("second-number").value);
+            if (!isNumber(x) || !isNumber(y)) {
+                console.log("输入非数字");
+            }
             z = x * y;
             document.getElementById("result").innerHTML = z;
         }
         document.getElementById("divide-btn").onclick = function () {
             var x = Number(document.getElementById("first-number").value);
             var y = Number(document.getElementById("second-number").value);
-            z = x / y;
-            document.getElementById("result").innerHTML = z;
+            if (!isNumber(x) || !isNumber(y)) {
+                console.log("输入非数字");
+            }
+            if (y === 0) {
+                console.log("除数不能为0");
+                document.getElementById("result").innerHTML = "错误";
+            } else {
+                z = x / y;
+                document.getElementById("result").innerHTML = z;
+            }
+
         }
     </script>
 </body>

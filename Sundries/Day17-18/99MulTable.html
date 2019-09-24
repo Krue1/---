@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>99乘法表</title>
+</head>
+
+<body>
+    <div id="hello">
+
+    </div>
+    <table id="mulTable">
+
+    </table>
+    <script>
+        let tab = document.getElementById("mulTable");
+        for (let i = 1; i <= 9; i++) {
+            let trow = document.createElement("tr");
+            tab.appendChild(trow);
+            for (let j = 1; j <= i; j++) {
+                let td = document.createElement("td");
+                td.innerHTML = j + "*" + i + "=" + i * j + "  ";
+                trow.appendChild(td);
+                // console.log(i+"*"+j+"="+i*j+"  ");
+            }
+            // console.log("\n");
+        }
+        let hour = new Date().getHours();
+        let greeting = document.getElementById("hello");
+        let greetingh = document.createElement("h1");
+        if (hour < 12) {
+            greetingh.innerHTML = "Good morning";
+        } else if (hour <= 18) {
+            greetingh.innerHTML = "Good afternoon";
+        } else {
+            greetingh.innerHTML = "Good evening";
+        }
+        greeting.appendChild(greetingh);
+    </script>
+</body>
+
+</html>
