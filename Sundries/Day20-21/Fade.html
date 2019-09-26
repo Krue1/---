@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+    <button id="fade-btn">淡出</button>
+
+    <script>
+        let fadeObj = document.querySelector("#fade-obj");
+        let fadeBtn = document.querySelector("#fade-btn");
+        let fadeOutID;
+        let fadeInID;
+        let opa = 100;
+        let r = 0;
+        let g = 0;
+        let b = 0;
+        fadeObj.style.opacity = 1;
+        function randomNum() {
+            return Math.random() * 255;
+        }
+        function rndColor() {
+            if (r < 0) {
+                r = 0;
+            } else if (r > 255) {
+                r = 255;
+            }
+            if (g < 0) {
+                g = 0;
+            } else if (g > 255) {
+                g = 255;
+            }
+            if (b < 0) {
+                b = 0;
+            } else if (b > 255) {
+                b = 255;
+            }
+            let color = "rgb(" + r + "," + g + "," + b + ")";
+            fadeObj.style.backgroundColor = color;
+        }
+        function fadeOut() {
+            fadeObj.style.opacity = --opa / 100.0;
+            r++;
+            g++;
+            b++;
+            rndColor();
+            if (fadeObj.style.opacity == 0) {
+                fadeOutID = clearInterval(fadeOutID);
+                fadeBtn.disabled = false;
+            }
+        }
+        function fadeIn() {
+            fadeObj.style.opacity = ++opa / 100.0;
+            r--;
+            g--;
+            b--;
+            rndColor();
+            if (fadeObj.style.opacity == 1) {
+                fadeInID = clearInterval(fadeInID);
+                fadeBtn.disabled = false;
+            }
+        }
+        fadeBtn.addEventListener("click", function () {
+            r = randomNum();
+            b = randomNum();
+            g = randomNum();
+            if (fadeBtn.innerHTML === "淡出") {
+                fadeBtn.innerHTML = "淡入";
+                fadeBtn.disabled = true;
+                fadeOutID = setInterval("fadeOut()", 30);
+            } else if (fadeBtn.innerHTML === "淡入") {
+                fadeBtn.innerHTML = "淡出";
+                fadeBtn.disabled = true;
+                fadeInID = setInterval("fadeIn()", 30);
+            }
+        })
+    </script>
+</body>
+
+</html>

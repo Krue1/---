@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript SMILE</title>
+    <style>
+        #sprite {
+            width: 480px;
+            height: 480px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background-image: url("erik_ce204002.jpg");
+            background-position: 0 -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sprite"></div>
+    <script>
+        let y = 481;
+        let img = document.querySelector("#sprite");
+        let SID1;
+        let SID2;
+        function sprite1() {
+            img.style.backgroundPosition = "0 -" + y + "px";
+            y += 480;
+            if (y === 8161) {
+                window.clearInterval(SID1);
+                y-=480;
+                SID2 = window.setInterval("sprite2()", 100);
+            }
+        }
+        function sprite2() {
+            img.style.backgroundPosition = "0 -" + y + "px";
+            y -= 480;
+            if (y === 1) {
+                window.clearInterval(SID2);
+                SID1 = window.setInterval("sprite1()", 100);
+            }
+        }
+        SID1 = window.setInterval("sprite1()", 100);
+    </script>
+</body>
+
+</html>

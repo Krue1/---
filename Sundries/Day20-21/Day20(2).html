@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+    <style>
+        select.noselected {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        <input id="school" name="status" type="radio">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio">
+        Company
+    </label>
+
+    <select id="school-select" class="noselected">
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select" class="noselected">
+        <option>百度</option>
+        <option>爱奇艺</option>
+    </select>
+
+    <script>
+        let radios = document.getElementsByName("status");
+        let labels = document.querySelectorAll("label");
+        let select1 = document.querySelector("#school-select");
+        let select2 = document.querySelector("#company-select");
+        for (var i = 0; i < labels.length; i++) {
+            labels[i].addEventListener("click", function () {
+                for (var i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        if (i===0) {
+                            select1.removeAttribute("class");
+                            select2.setAttribute("class","noselected");
+                        } else if (i===1) {
+                            select2.removeAttribute("class");
+                            select1.setAttribute("class","noselected");
+                        }
+                    }
+                }
+            });
+        }
+
+
+        // let r1 = document.querySelector("#school");
+        // let r2 = document.querySelector("#company");
+
+    </script>
+</body>
+
+</html>
