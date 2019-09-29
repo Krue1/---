@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript StackR</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input id="stack-input" type="text">
+    <p id="stack-cont">栈内容：apple-&gt;pear</p>
+    <button id="push-btn">进栈</button>
+    <button id="pop-btn">退栈</button>
+    <button id="top-btn">打印栈顶元素内容</button>
+    <button id="empty-btn">判断栈是否为空</button>
+
+    <script>
+
+        var stack = ["apple", "pear"];
+        let input = document.querySelector("#stack-input");
+        let stackCont = document.querySelector("#stack-cont");
+        let pushBtn = document.querySelector("#push-btn");
+        let popBtn = document.querySelector("#pop-btn");
+        let topBtn = document.querySelector("#top-btn");
+        let emptyBtn = document.querySelector("#empty-btn");
+        let topS = 1;
+        function isEmpty() {
+            return topS === -1;
+        }
+        function pushStack() {
+            topS = stack.push(input.value) - 1;
+            return true;
+        }
+        function popStack() {
+            if (isEmpty()) {
+                return "It's a empty stack.";
+            } else {
+                topS--;
+                return stack.pop();
+            }
+        }
+        function printTop() {
+            if (isEmpty()) {
+                return "It's a empty stack.";
+            } else {
+                return stack[topS];
+            }
+        }
+        function printStack() {
+            stackCont.textContent = "栈内容：";
+            stackCont.textContent += stack.join("->");
+        }
+
+        pushBtn.addEventListener("click", function () {
+            pushStack();
+            printStack();
+        })
+        popBtn.addEventListener("click", function () {
+            popStack();
+            printStack();
+        })
+        topBtn.addEventListener("click", function () {
+            stackCont.textContent = "栈顶元素内容：";
+            stackCont.textContent += printTop();
+        })
+        emptyBtn.addEventListener("click", function () {
+            if (isEmpty()) {
+                stackCont.textContent = "栈空";
+            } else {
+                stackCont.textContent = "栈非空";
+            }
+        })
+    </script>
+</body>
+
+</html>

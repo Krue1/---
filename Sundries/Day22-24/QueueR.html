@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript QueueR</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input id="queue-input" type="text">
+    <p id="queue-cont">队列内容：apple-&gt;pear</p>
+    <button id="in-btn">入队</button>
+    <button id="out-btn">出队</button>
+    <button id="front-btn">打印队头元素内容</button>
+    <button id="empty-btn">判断队列是否为空</button>
+
+    <script>
+
+        var queue = ["apple", "pear"];
+        let input = document.querySelector("#queue-input");
+        let queueCont = document.querySelector("#queue-cont");
+        let inBtn = document.querySelector("#in-btn");
+        let outBtn = document.querySelector("#out-btn");
+        let frontBtn = document.querySelector("#front-btn");
+        let emptyBtn = document.querySelector("#empty-btn");
+        let front = 1, rear = 0;
+        function isEmpty() {
+            return front === -1;
+        }
+        function enQueue() {
+            front = queue.unshift(input.value) - 1;
+            return true;
+        }
+        function deQueue() {
+            if (isEmpty()) {
+                return "It's a empty queue.";
+            } else {
+                front--;
+                return queue.pop();
+            }
+        }
+        function printFront() {
+            if (isEmpty()) {
+                return "It's a empty queue.";
+            } else {
+                return queue[front];
+            }
+        }
+        function printQueue() {
+            queueCont.textContent = "队列内容：";
+            // for (var i = 0; i < queue.length; i++) {
+            //     queueCont.textContent += queue[i];
+            //     if (i !== queue.length - 1) {
+            //         queueCont.textContent += "->";
+            //     }
+            // }
+            queueCont.textContent += queue.join("->");
+        }
+
+        inBtn.addEventListener("click", function () {
+            enQueue();
+            printQueue();
+        })
+        outBtn.addEventListener("click", function () {
+            deQueue();
+            printQueue();
+        })
+        frontBtn.addEventListener("click", function () {
+            queueCont.textContent = "队头元素内容：";
+            queueCont.textContent += printFront();
+        })
+        emptyBtn.addEventListener("click", function () {
+            if (isEmpty()) {
+                queueCont.textContent = "队空";
+            } else {
+                queueCont.textContent = "队非空";
+            }
+        })
+    </script>
+</body>
+
+</html>
