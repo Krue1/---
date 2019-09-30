@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript Clock</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p id="clock-display"></p>
+    <p id="clock-display2"></p>
+    <script>
+        function getWeekday(day) {
+            let weekday = ["日", "一", "二", "三", "四", "五", "六"];
+            return weekday[day];
+        }
+        function getWeekday2(day) {
+            let weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            return weekday[day];
+        }
+
+        function fillZero(n) {
+            if (n < 10) {
+                return "0" + n;
+            } else {
+                return String(n);
+            }
+        }
+
+        function format(year, month, date, day, hour, minute, second) {
+            return year + "年" + month + "月" + date + "日星期" + day + " " + hour
+                + ":" + minute + ":" + second;
+        }
+        function format2(year, month, date, day, hour, minute, second) {
+            let flag = Math.floor(hour / 12);
+            hour = hour % 12;
+            let text = year + "-" + month + "-" + date + " " + day + " " + hour
+                + ":" + minute + ":" + second + " ";
+            if (flag) {
+                return text + "PM";
+            } else {
+                return text + "AM";
+            }
+        }
+
+        function startClock() {
+            let d = new Date();
+            let year = d.getFullYear();
+            let month = d.getMonth();
+            let date = d.getDate();
+            let day = getWeekday(d.getDay());
+            let hour = fillZero(d.getHours());
+            let minute = fillZero(d.getMinutes());
+            let second = fillZero(d.getSeconds());
+            document.getElementById("clock-display").textContent =
+                format(year, month, date, day, hour, minute, second);
+            window.setTimeout(startClock, 1000);
+        }
+        function startClock2() {
+            let d = new Date();
+            let year = d.getFullYear();
+            let month = d.getMonth();
+            let date = d.getDate();
+            let day = getWeekday2(d.getDay());
+            let hour = fillZero(d.getHours());
+            let minute = fillZero(d.getMinutes());
+            let second = fillZero(d.getSeconds());
+            document.getElementById("clock-display2").textContent =
+                format2(year, month, date, day, hour, minute, second);
+        }
+        window.setTimeout(startClock, 1000);
+        window.setInterval(startClock2, 1000);
+    </script>
+</body>
+
+</html>

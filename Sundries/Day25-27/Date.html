@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript Date</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="select-bar">
+        <select id="year-select">
+        </select>
+
+        <select id="month-select">
+        </select>
+
+        <select id="day-select">
+        </select>
+
+        <select id="hour-select">
+        </select>
+
+        <select id="minute-select">
+        </select>
+
+        <select id="second-select">
+        </select>
+    </div>
+
+    <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+    <script>
+        let yearSelect = document.querySelector("#year-select");
+        let monthSelect = document.querySelector("#month-select");
+        let daySelect = document.querySelector("#day-select");
+        let hourSelect = document.querySelector("#hour-select");
+        let minuteSelect = document.querySelector("#minute-select");
+        let secondSelect = document.querySelector("#second-select");
+        let selectBar = document.querySelector("#select-bar");
+        let wrapper = document.querySelector("#result-wrapper");
+        let myYear = 2000;
+        let myMonth = 1;
+        let myDay = 1;
+        let myHour = 0;
+        let myMinute = 0;
+        let mySecond = 0;
+        let myDate = new Date();
+        myDate.setFullYear(myYear, myMonth, myDay);
+        myDate.setHours(myHour);
+        myDate.setMinutes(myMinute);
+        myDate.setSeconds(mySecond);
+
+        function generateSelect(x, start, end) {
+            x.innerHTML = "";
+            for (var i = start; i <= end; i++) {
+                let optionTemp = document.createElement("option");
+                optionTemp.value = i;
+                optionTemp.innerHTML = i;
+                x.appendChild(optionTemp);
+            }
+        }
+        generateSelect(yearSelect, 2000, 2032);
+        generateSelect(monthSelect, 1, 12);
+        generateSelect(daySelect, 1, 31);
+        generateSelect(hourSelect, 0, 23);
+        generateSelect(minuteSelect, 0, 59);
+        generateSelect(secondSelect, 0, 59);
+        function generateDaySelect() {
+            if (myMonth === 4 || myMonth === 6 || myMonth === 9 || myMonth === 11) {
+                generateSelect(daySelect, 1, 30);
+            } else if (myMonth === 2) {
+                if (myYear % 4 === 0 && myYear % 100 !== 0) {
+                    generateSelect(daySelect, 1, 29);
+                } else {
+                    generateSelect(daySelect, 1, 28);
+                }
+            } else {
+                generateSelect(daySelect, 1, 31);
+            }
+            myDay = 1;
+        }
+
+        function getDateSelected(e) {
+            let t = e.target;
+            if (t === yearSelect) {
+                myYear = Number(t.options[t.selectedIndex].value);
+                generateDaySelect();
+                myDate.setYear(myYear);
+            } else if (t === monthSelect) {
+                myMonth = Number(t.options[t.selectedIndex].value);
+                generateDaySelect();
+                myDate.setMonth(myMonth-1);
+            } else if (t === daySelect) {
+                myDay = Number(t.options[t.selectedIndex].value);
+                myDate.setDate(myDay);
+            } else if (t === hourSelect) {
+                myHour = Number(t.options[t.selectedIndex].value);
+                myDate.setHours(myHour);
+            } else if (t === minuteSelect) {
+                myMinute = Number(t.options[t.selectedIndex].value);
+                myDate.setMinutes(myMinute);
+            } else {
+                mySecond = Number(t.options[t.selectedIndex].value);
+                myDate.setSeconds(mySecond);
+            }
+        }
+        function format(year, month, date, day, hour, minute, second) {
+            hour = fillZero(hour);
+            minute = fillZero(minute);
+            second = fillZero(second);
+            return year + "年" + month + "月" + date + "日星期" + day + " " + hour
+                + ":" + minute + ":" + second;
+        }
+        selectBar.addEventListener("change", function (e) {
+            getDateSelected(e);
+        });
+
+        function fillZero(n) {
+            if (n < 10) {
+                return "0" + n;
+            } else {
+                return String(n);
+            }
+        }
+        function getWeekday(day) {
+            let weekday = ["日", "一", "二", "三", "四", "五", "六"];
+            return weekday[day];
+        }
+        function compareTime() {
+            let t1 = myDate.getTime();
+            let nowDate = new Date();
+            let t2 = nowDate.getTime();
+            return t1 - t2;
+        }
+        function format2(x) {
+            if (x < 0) {
+                x = -x;
+            }
+            x /= 1000;
+            x = Math.floor(x);
+
+            let s = x % 60;
+            x /= 60;
+            x = Math.floor(x);
+
+            let m = x % 60;
+            x /= 60;
+            x = Math.floor(x);
+
+            let h = x % 24;
+            x /= 24;
+            x = Math.floor(x);
+
+            let d = x;
+            return d + " 天 " + h + " 小时 " + m + " 分 " + s + " 秒";
+        }
+        function startClock() {
+            let s1 = "现在距离 ";
+            let s2 = format(myYear, myMonth, myDay, getWeekday(myDate.getDay()), myHour, myMinute, mySecond);
+            let s3 = " 还有 ";
+            let interval = compareTime();
+            if (interval<0) {
+                s3 = " 已经过去 ";
+            }
+            let s4 = format2(interval);
+            wrapper.textContent = s1 + s2 + s3 + s4;
+        }
+        window.setInterval(startClock, 1000);
+    </script>
+</body>
+
+</html>
