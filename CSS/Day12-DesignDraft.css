@@ -17,6 +17,10 @@ p {
     font-weight: 400;
 }
 
+h3 {
+    font-size: 1.125rem;
+}
+
 h4 {
     font-size: 1rem;
 }
@@ -362,6 +366,12 @@ img[src="../Sundries/Day12-15/12_15-assets/Notification3.png"] {
     width: calc(100% - 402px);
     height: 100%;
     float: left;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#quaternary::-webkit-scrollbar {
+    width: 0;
 }
 
 #quaternary #profile-bar {
@@ -373,21 +383,117 @@ img[src="../Sundries/Day12-15/12_15-assets/Notification3.png"] {
     top: -1px;
 }
 
-#quaternary #profile-bar h1 {
+#quaternary #profile-bar > h3 {
     line-height: 36px;
-    text-align: center;
+    float: left;
+    color: #585d68;
+}
+
+#quaternary #profile-bar > img[src="../Sundries/Day12-15/12_15-assets/Tools.png"] {
+    position: absolute;
+    top: 16px;
+    right: 43.5%;
+}
+
+#quaternary #profile-bar > .divider {
+    position: absolute;
+    top: 16px;
+    right: 39.5%;
+    width: 1px;
+    height: 36px;
+    background-color: #f0f1f4;
+}
+
+#quaternary #profile-bar > h5 {
+    position: absolute;
+    top: 16px;
+    right: 29.5%;
+    line-height: 36px;
+    color: #56688a;
+}
+
+#quaternary #profile-bar > img[src="../Sundries/Day12-15/12_15-assets/Arrows.png"] {
+    position: absolute;
+    top: 16px;
+    right: 13.5%;
+}
+
+#quaternary .open-chat {
+    margin: 26px 30px;
+    width: 100%;
+}
+
+#quaternary .open-chat > img {
+    float: left;
+    margin-right: 20px;
+}
+
+#quaternary .open-chat .text {
+    width: 80%;
+    overflow: hidden;
+}
+
+#quaternary .open-chat .text > h4 {
+    display: inline;
+    color: #585d68;
+}
+
+#quaternary .open-chat .text > h5 {
+    display: inline;
+    color: #7f8fa4;
+}
+
+#quaternary .open-chat .text > p {
+    margin-top: 12px;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    color: #585d68;
+}
+
+#quaternary .open-chat .text > img {
+    margin: 10px 20px;
+    margin-left: 0;
 }
 
 #quaternary #line1 {
-    margin: 200px 20px;
-    margin-bottom: 50px;
+    margin: 0;
     text-align: center;
     line-height: 1px;
-    border-left: 160px solid #7f8fa4;
-    border-right: 160px solid #7f8fa4;
+    border-left: 200px solid #7f8fa4;
+    border-right: 200px solid #7f8fa4;
+    color: #7f8fa4;
 }
 
 #quaternary > h1 {
     line-height: 100px;
     text-align: center;
+}
+
+#quaternary #line2 {
+    margin: 0;
+    text-align: center;
+    line-height: 1px;
+    border-left: 180px solid #2399f1;
+    border-right: 180px solid #2399f1;
+    color: #2399f1;
+}
+
+#quaternary > .container {
+    display: flex;
+    align-items: center;
+    margin: 26px 30px;
+    width: 90%;
+    border: 1px solid #dfe3e9;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#quaternary > .container > img {
+    float: left;
+    margin-right: 20px;
+}
+
+#quaternary > .container > p {
+    font-size: 0.875rem;
+    color: #585d68;
 }
