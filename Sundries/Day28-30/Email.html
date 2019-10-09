@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>给爱的人发个邮件吧</title>
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            width: 212px;
+            border: 1px solid rgba(196, 196, 196, 0.8);
+            border-top: none;
+            cursor: default;
+        }
+
+        li {
+            padding: 6px;
+            width: 200px;
+            list-style: none;
+            color: #aaa;
+            font-weight: normal;
+            overflow: hidden;
+        }
+
+        input {
+            border: 1px solid rgba(196, 196, 196, 0.8);
+            outline: none;
+            padding: 6px;
+            width: 200px;
+            color: #444;
+            margin: 0 auto;
+
+        }
+
+        li:hover {
+            background-color: #bddfec;
+        }
+
+        .wrapper {
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .selected {
+            background-color: #ffc5cf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <input id="email-input" type="text">
+        <ul id="email-sug-wrapper" class="email-sug" style="display: none;"></ul>
+    </div>
+    <script>
+        // 邮箱后缀List参考
+        var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+        let inputDom = document.querySelector("#email-input");
+        let sugWrapper = document.querySelector("#email-sug-wrapper");
+        let userInput = "";
+        inputDom.focus();
+
+        inputDom.oninput = function (e) {
+            // 获取用户输入，生成提示框中的提示内容，将提示内容添加到email - sug - wrapper中
+            // 控制email - sug - wrapper的显示 / 隐藏状态
+            addPromptToWrapper();
+            showOrHide();
+            //如果按键不是上下及回车重置选中状态
+            if (e.keyCode !== 40 && e.keyCode !== 38 && e.keyCode !== 13) {
+                resetStatus();
+            }
+        }
+
+        inputDom.onkeyup = function (e) {
+            let selectedLi = document.getElementsByClassName("selected")[0];
+            let liList = document.getElementsByTagName("li");
+            let selectedIndex = 0;
+            for (let i = 0; i < liList.length; i++) {
+                if (liList[i].textContent === selectedLi.textContent) {
+                    selectedIndex = i;
+                    break;
+                }
+            }
+            if (e.keyCode === 40 || e.keyCode === 38 || e.keyCode === 13) {
+                selectedLi.removeAttribute("class");
+            }
+            if (e.keyCode === 40) {
+                //Arrow down
+                console.log("40");
+                if (selectedIndex !== liList.length - 1) {
+                    liList[selectedIndex + 1].setAttribute("class", "selected");
+                } else {
+                    liList[0].setAttribute("class", "selected");
+                }
+            }
+            if (e.keyCode === 38) {
+                //Arrow up
+                console.log("38");
+                if (selectedIndex !== 0) {
+                    liList[selectedIndex - 1].setAttribute("class", "selected");
+                } else {
+                    liList[liList.length - 1].setAttribute("class", "selected");
+                }
+            }
+            if (e.keyCode === 13) {
+                //Enter
+                console.log("13");
+                inputDom.value = liList[selectedIndex].textContent;
+                hide();
+            }
+            if (e.keyCode === 27) {
+                //Esc
+                console.log("27");
+                inputDom.select();
+            }
+        }
+
+        function resetStatus() {
+            let selectedLi = document.getElementsByClassName("selected")[0];
+            let liFirst = document.getElementsByTagName("li")[0];
+            if (typeof selectedLi === "undefined" || typeof liFirst === "undefined") {
+                return;
+            }
+            if (selectedLi.textContent !== liFirst.textContent) {
+                selectedLi.removeAttribute("class");
+                liFirst.setAttribute("class", "selected");
+            }
+        }
+
+        function getUserInput() {
+            // 拿到input输入框的输入内容trim后返回
+            return inputDom.value.trim();
+        }
+
+        function generatePrompt() {
+            // 获取用户输入
+            userInput = getUserInput();
+            //如果userInput里面有@就截取@前面的字符串
+            let matchS = "";
+            if (userInput.indexOf("@") >= 0) {
+                matchS = userInput.slice(userInput.indexOf("@") + 1);//用于后缀匹配
+                userInput = userInput.slice(0, userInput.indexOf("@"));
+            }
+            // 遍历postfixList 把用户输入和每一个postfix进行结合成为每一个Li
+            let arr = [];
+            let regExp = new RegExp("^" + matchS);
+            for (i in postfixList) {
+                if (regExp.test(postfixList[i])) {
+                    let temp = document.createElement("li");
+                    temp.textContent = userInput + "@" + postfixList[i];
+                    arr.push(temp);
+                }
+            }
+            if (arr.length === 0) {
+                for (i in postfixList) {
+                    let temp = document.createElement("li");
+                    temp.textContent = userInput + "@" + postfixList[i];
+                    arr.push(temp);
+                }
+            }
+            arr[0].setAttribute("class", "selected");
+            // 返回生成的提示内容
+            return arr;
+        }
+
+        function addPromptToWrapper() {
+            // 获取生成提示框中的提示内容
+            let prompt = generatePrompt();
+            // 将内容添加到email - sug - wrapper中
+            sugWrapper.innerHTML = "";
+            for (i in prompt) {
+                sugWrapper.appendChild(prompt[i]);
+            }
+        }
+
+        function showOrHide() {
+            if (userInput === "") {
+                hide();
+            } else {
+                show();
+            }
+        }
+
+        function hide() {
+            sugWrapper.style.cssText = "display:none";
+        }
+
+        function show() {
+            sugWrapper.style.cssText = "";
+        }
+
+        sugWrapper.addEventListener("click", function (e) {
+            inputDom.value = e.target.textContent;
+            inputDom.focus();
+            hide();
+        })
+    </script>
+</body>
+
+</html>
