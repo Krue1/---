@@ -40,3 +40,6 @@
 
 * Day28-30
     * [给爱的人发个邮件吧](https://krue1.github.io/IFE-learning/Sundries/Day28-30/Email.html) 
+
+* Day31-33
+    * [我是精明的小卖家（一）](https://krue1.github.io/IFE-learning/Sundries/Day31-33/Seller(complex).html) 
