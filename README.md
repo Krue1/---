@@ -43,3 +43,6 @@
 
 * Day31-33
     * [我是精明的小卖家（一）](https://krue1.github.io/IFE-learning/Sundries/Day31-33/Seller(complex).html) 
+
+* Day34-36
+    * [我是精明的小卖家（二）](https://krue1.github.io/IFE-learning/Sundries/Day34-36/LineChart.html) 
