@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="800"></canvas>
+    <script>
+        let canvas = document.querySelector("#canvas");
+        let ctx = canvas.getContext("2d");
+
+        //线
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 30);
+        ctx.stroke();
+
+        //矩形
+        ctx.fillStyle = "#456789";
+        ctx.moveTo(0, 50);
+        ctx.fillRect(20, 50, 100, 100);
+
+        //圆形
+        ctx.fillStyle = "#987654";
+        ctx.beginPath();
+        ctx.moveTo(100, 140);
+        ctx.arc(100, 240, 50, 0, Math.PI * 2, true);
+        ctx.fill();
+
+        //文字
+        ctx.font = "48px Arial";
+        ctx.fillStyle = "rgba(50,89,111,0.5)";
+        ctx.fillText("Hello World!", 0, 300);
+
+        //时钟
+        let r = 80;
+        ctx.beginPath();
+        ctx.arc(100, 400, r, 0, Math.PI * 2, true);
+        ctx.lineWidth = 8;
+        ctx.strokeStyle = "#456789";
+        ctx.stroke();
+        let nr = r - 16;
+        var hourNumbers = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];    //定义标记小时的数组
+        hourNumbers.map(function (number, i) {                    //遍历 取出各刻度及所在索引
+            //每个刻度所占弧度为索引乘以一小时的弧度，即 1点钟30度，2点钟60度，以此类推..
+            var rad = 2 * Math.PI / 12 * i;
+            var x = Math.cos(rad) * nr + 100;
+            var y = Math.sin(rad) * nr + 400; 　　　　　　　　//确定各刻度点 X、Y坐标 
+            ctx.textAlign = 'center'; 　　　　　　　　　　　　　　　　//绘制的刻度在整个画布左右居中 
+            ctx.textBaseline = 'middle'; 　　　　　　　　　　　　　　//同理，上下居中 
+            ctx.font = "16px Arial"; 　　　　　　　　　　　//设置显示刻度的数字 1,2,3.. 的字体及字号 
+            ctx.fillText(number, x, y) 　　　　　　　　　　　　　　　//绘制文字
+        });
+
+        //云
+        ctx.beginPath();
+        ctx.moveTo(50,520);
+        ctx.quadraticCurveTo(75,480,180,530);
+        ctx.quadraticCurveTo(222,500,240,560);
+        ctx.quadraticCurveTo(260,580,230,600);
+        ctx.quadraticCurveTo(180,640,150,610);
+        ctx.quadraticCurveTo(100,630,100,580);
+        ctx.quadraticCurveTo(20,566,50,520);
+        ctx.stroke();
+        ctx.fillText("↑这是云 我太难了", 120, 640);
+    </script>
+</body>
+
+</html>

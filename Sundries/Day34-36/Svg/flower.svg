@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="56.5px" height="77.5px">
+<path fill-rule="evenodd"  stroke="rgb(67, 67, 67)" stroke-width="5px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M24.500,8.500 C32.784,8.500 39.500,15.216 39.500,23.500 C39.500,31.784 32.784,38.500 24.500,38.500 C16.216,38.500 9.500,31.784 9.500,23.500 C9.500,15.216 16.216,8.500 24.500,8.500 Z"/>
+<path fill-rule="evenodd"  stroke="rgb(67, 67, 67)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M28.500,34.500 C28.500,34.500 47.304,59.728 36.500,73.500 "/>
+<path fill-rule="evenodd"  stroke="rgb(126, 107, 90)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M16.500,11.500 C20.030,-5.363 31.751,3.233 31.500,10.500 "/>
+<path fill-rule="evenodd"  stroke="rgb(126, 107, 90)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M30.500,9.500 C30.500,9.500 47.971,-0.624 38.500,16.500 "/>
+<path fill-rule="evenodd"  stroke="rgb(126, 107, 90)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M38.500,16.500 C57.357,11.298 53.804,21.541 40.500,25.500 "/>
+<path fill-rule="evenodd"  stroke="rgb(126, 107, 90)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M40.958,21.767 C54.293,32.946 41.100,39.132 34.752,35.431 "/>
+<path fill-rule="evenodd"  stroke="rgb(126, 107, 90)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M36.115,35.031 C36.115,35.031 36.859,55.237 26.101,38.711 "/>
+<path fill-rule="evenodd"  stroke="rgb(126, 107, 90)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M26.101,38.711 C21.810,57.778 14.376,49.749 17.147,36.159 "/>
+<path fill-rule="evenodd"  stroke="rgb(126, 107, 90)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M18.694,37.711 C2.554,43.887 3.575,29.446 9.854,25.723 "/>
+<path fill-rule="evenodd"  stroke="rgb(126, 107, 90)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M9.542,27.099 C9.542,27.099 -8.331,17.985 11.197,16.630 "/>
+<path fill-rule="evenodd"  stroke="rgb(126, 107, 90)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M11.197,16.630 C-3.253,3.694 7.303,1.119 17.741,10.089 "/>
+</svg>
