@@ -2,7 +2,7 @@ function drawLineChart(lineData) {
     //定义好折线图绘制区域的高度，宽度，轴的高度，宽度
     let canvas = document.querySelector("#canvas");
     let ctx = canvas.getContext("2d");
-
+    //ctx.scale(0.5,0.5);
     //x axis
     ctx.beginPath();
     ctx.moveTo(100, 450);
@@ -32,9 +32,9 @@ function drawLineChart(lineData) {
     }
 
     //定义好每一个数据点的直径，颜色，线的颜色，宽度
-    let dotR = 2.5;
+    let dotR = 3;
     ctx.lineWidth = 2;
-    ctx.fillStyle = "#000";
+    ctx.fillStyle = "#82a4f3";
     ctx.strokeStyle = "#82a4f3";
 
     let max = Math.max.apply(null, lineData);
@@ -43,7 +43,7 @@ function drawLineChart(lineData) {
     for (let i in lineData) {
         ctx.beginPath();
         ctx.arc(150 + 40 * i, 450 - lineData[i] * proportion, dotR, 0, Math.PI * 2, true);
-        ctx.stroke();
+        ctx.fill();
         if (i !== 0) {
             ctx.beginPath();
             ctx.moveTo(last[0], last[1]);
