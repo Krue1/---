@@ -5,11 +5,12 @@ function drawBarChart(barData) {
     var interval = 87; //每根柱子开始的x坐标
     var xx = 1;
     var columnStyle = 'fill: rgb(101,161,215)';
-    // let barDoc = document.querySelector("#bar");
-    // let svgDoc = barDoc.contentDocument;
-    // let embedSVG = svgDoc.querySelector("svg");
-    //var embedSVG = document.querySelector("#bar").getSVGDocument().querySelector("#bar");
     let embedSVG = document.querySelector("svg");
+    //清除之前画的柱
+    let previousRect = embedSVG.querySelectorAll("rect");
+    for (let i = 0; i < previousRect.length; i++) {
+        embedSVG.removeChild(previousRect[i]);
+    }
     //关键代码：embedSVG的赋值。最后的getElementById('svgColumn')，是svg文件中，svg标签的id
     for (let i in barData) {
         var rect = document.createElementNS(nameSpace, 'rect');//creat新的svg节点，rect。
@@ -24,4 +25,3 @@ function drawBarChart(barData) {
         xx += 0.2;
     }
 }
-window.drawBarChart([120, 100, 140, 160, 180, 185, 190, 210, 230, 245, 255, 270]);

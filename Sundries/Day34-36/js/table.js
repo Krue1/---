@@ -161,3 +161,28 @@ function renderTable() {
         }
     }
 }
+
+tbody.addEventListener("mouseover", function (e) {
+    let t = e.target;
+    if (t.nodeName.toLowerCase() === "td") {
+        let thisRow = e.path[1];
+        let tds = thisRow.children;
+        let chartData = [];
+        if (tds.length===13){
+            for (let i = 1; i < tds.length; i++) {
+                if (tds[i].nodeName.toLowerCase() === "td") {
+                    console.log(tds[i].textContent);
+                    chartData.push(tds[i].textContent);
+                }
+            }
+        } else {
+            for (let i = 2; i < tds.length; i++) {
+                if (tds[i].nodeName.toLowerCase() === "td") {
+                    chartData.push(tds[i].textContent);
+                }
+            }
+        }
+        drawBarChart(chartData);
+        drawLineChart(chartData);
+    }
+})

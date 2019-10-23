@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我是精明的小卖家（二）</title>
+    <style>
+        #table-wrapper {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #chart-wrapper {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #table {
+            border-collapse: collapse;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #000;
+            text-align: center;
+            padding: 5px 0 5px 0;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="region-radio-wrapper">
+        <span>地区</span>
+        <label><input type="checkbox" value="华东" checked="checked" name="region">华东</label>
+        <label><input type="checkbox" value="华南" name="region">华南</label>
+        <label><input type="checkbox" value="华北" name="region">华北</label>
+        <label><input type="checkbox" value="全选" name="region">全选</label>
+    </div>
+    <div id="product-radio-wrapper">
+        <span>商品</span>
+        <label><input type="checkbox" value="手机" checked="checked">手机</label>
+        <label><input type="checkbox" value="笔记本">笔记本</label>
+        <label><input type="checkbox" value="智能音箱">智能音箱</label>
+        <label><input type="checkbox" value="全选">全选</label>
+    </div>
+    <div id="table-wrapper">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th width="80px">商品</th>
+                    <th width="80px">地区</th>
+                    <th>1月</th>
+                    <th>2月</th>
+                    <th>3月</th>
+                    <th>4月</th>
+                    <th>5月</th>
+                    <th>6月</th>
+                    <th>7月</th>
+                    <th>8月</th>
+                    <th>9月</th>
+                    <th>10月</th>
+                    <th>11月</th>
+                    <th>12月</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="chart-wrapper">
+        <div id="bar-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="550px"
+                height="300px" id="barr" viewBox="40 -60 1000 600">
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="rgb(195, 230, 220)"
+                    d="M32.500,137.500 L32.500,437.500 L31.500,437.500 L31.500,137.500 L32.500,137.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="rgb(54, 46, 43)"
+                    d="M15.500,437.500 L15.500,436.500 L1001.500,436.500 L1001.500,437.500 L15.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M106.500,437.500 L107.500,437.500 L107.500,457.500 L106.500,457.500 L106.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M181.500,437.500 L182.500,437.500 L182.500,457.500 L181.500,457.500 L181.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M256.500,437.500 L257.500,437.500 L257.500,457.500 L256.500,457.500 L256.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M331.500,437.500 L332.500,437.500 L332.500,457.500 L331.500,457.500 L331.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M406.500,437.500 L407.500,437.500 L407.500,457.500 L406.500,457.500 L406.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M481.500,437.500 L482.500,437.500 L482.500,457.500 L481.500,457.500 L481.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M556.500,437.500 L557.500,437.500 L557.500,457.500 L556.500,457.500 L556.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M631.500,437.500 L632.500,437.500 L632.500,457.500 L631.500,457.500 L631.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M706.500,437.500 L707.500,437.500 L707.500,457.500 L706.500,457.500 L706.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M781.500,437.500 L782.500,437.500 L782.500,457.500 L781.500,457.500 L781.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M856.500,437.500 L857.500,437.500 L857.500,457.500 L856.500,457.500 L856.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M931.500,437.500 L932.500,437.500 L932.500,457.500 L931.500,457.500 L931.500,437.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M31.500,377.500 L31.500,378.500 L11.500,378.500 L11.500,377.500 L31.500,377.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M31.500,317.500 L31.500,318.500 L11.500,318.500 L11.500,317.500 L31.500,317.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M31.500,257.500 L31.500,258.500 L11.500,258.500 L11.500,257.500 L31.500,257.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M31.500,197.500 L31.500,198.500 L11.500,198.500 L11.500,197.500 L31.500,197.500 Z" />
+                <path fill-rule="evenodd" stroke="rgb(54, 46, 43)" stroke-width="3px" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill="none"
+                    d="M31.500,137.500 L31.500,138.500 L11.500,138.500 L11.500,137.500 L31.500,137.500 Z" />
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="90px"
+                    y="490px">&#19968;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="163px"
+                    y="490px">&#20108;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="238px"
+                    y="490px">&#19977;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="314px"
+                    y="490px">&#22235;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="387px"
+                    y="490px">&#20116;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="464px"
+                    y="490px">&#20845;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="537px"
+                    y="490px">&#19971;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="614px"
+                    y="490px">&#20843;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="690px"
+                    y="490px">&#20061;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="765px"
+                    y="490px">&#21313;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="830px"
+                    y="490px">&#21313;&#19968;&#26376;</text>
+                <text font-family="Microsoft YaHei" fill="rgb(88, 93, 104)" font-size="18px" x="906px"
+                    y="490px">&#21313;&#20108;&#26376;</text>
+            </svg>
+        </div>
+        <div id="line-wrapper">
+            <canvas id="canvas" width="550" height="400"></canvas>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/ife31data.js"></script>
+    <script type="text/javascript" src="js/checkbox.js"></script>
+    <script type="text/javascript" src="js/table.js"></script>
+    <script type="text/javascript" src="js/bar.js"></script>
+    <script type="text/javascript" src="js/line.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
