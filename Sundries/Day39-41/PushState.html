@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我是精明的小卖家（四）</title>
+    <style>
+        #table-wrapper {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #table {
+            border-collapse: collapse;
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #000;
+            text-align: center;
+            padding: 5px 0 5px 0;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="region-radio-wrapper">
+        <span>地区</span>
+        <label><input type="checkbox" value="华东" checked="checked" name="region">华东</label>
+        <label><input type="checkbox" value="华南" name="region">华南</label>
+        <label><input type="checkbox" value="华北" name="region">华北</label>
+        <label><input type="checkbox" value="全选" name="region">全选</label>
+    </div>
+    <div id="product-radio-wrapper">
+        <span>商品</span>
+        <label><input type="checkbox" value="手机" checked="checked">手机</label>
+        <label><input type="checkbox" value="笔记本">笔记本</label>
+        <label><input type="checkbox" value="智能音箱">智能音箱</label>
+        <label><input type="checkbox" value="全选">全选</label>
+    </div>
+    <div id="table-wrapper">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th width="80px">商品</th>
+                    <th width="80px">地区</th>
+                    <th>1月</th>
+                    <th>2月</th>
+                    <th>3月</th>
+                    <th>4月</th>
+                    <th>5月</th>
+                    <th>6月</th>
+                    <th>7月</th>
+                    <th>8月</th>
+                    <th>9月</th>
+                    <th>10月</th>
+                    <th>11月</th>
+                    <th>12月</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="js/ife31data.js"></script>
+    <script type="text/javascript" src="js/checkbox.js"></script>
+    <script type="text/javascript" src="js/table.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>location Hash</title>
+</head>
+
+<body>
+    <button id="a">A</button>
+    <button id="b">B</button>
+    <button id="c">C</button>
+
+    <button id="d">D</button>
+    <button id="e">E</button>
+    <button id="f">F</button>
+
+
+    <div id="contABC"></div>
+    <div id="contDEF"></div>
+
+    <script>
+        let buttons = document.querySelectorAll("button");
+        let contABC = document.querySelector("#contABC");
+        let contDEF = document.querySelector("#contDEF");
+        function getHash() {
+            let hashContent = location.hash.slice(1).split("_");
+            for (let i = 0; i < 2; i++) {
+                if (!hashContent[i]) {
+                    hashContent[i] = "";
+                }
+            }
+            return hashContent;
+        }
+        function setHash1(e) {
+            let t = e.target;
+            let hashContent = getHash();
+            location.hash = t.textContent + "_" + hashContent[1];
+        }
+        function setHash2(e) {
+            let t = e.target;
+            let hashContent = getHash();
+            location.hash = hashContent[0] + "_" + t.textContent;
+        }
+        function renderPage() {
+            let hashContent = getHash();
+            contABC.textContent = hashContent[0];
+            contDEF.textContent = hashContent[1];
+        }
+        for (let i = 0; i < buttons.length / 2; i++) {
+            buttons[i].addEventListener("click", setHash1)
+        }
+        for (let i = buttons.length / 2; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", setHash2)
+        }
+        window.addEventListener("hashchange", renderPage);
+        renderPage();
+    </script>
+</body>
+
+</html>
